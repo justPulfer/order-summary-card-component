@@ -28,7 +28,7 @@ body {
   5. Improve text rendering
 */
 body {
-    line-height: 1.5;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -77,15 +77,17 @@ h6 {
     --clr-desaturated-blue: hsl(224, 23%, 55%); 
     --clr-dark-blue: hsl(223, 47%, 23%);
 
-    --fs-medium: 500;
-    --fs-bold: 700;
-    --fs-black: 900;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
 }
 
 /* General Styling */
 
 body {
     font-family: 'Red Hat Display', sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: 1rem;
 }
 
 main {
@@ -101,37 +103,80 @@ main {
 }
 
 .main-container {
-    margin: 3rem 2rem;
+    margin: 2rem;
     border-radius: 1rem;
     overflow: hidden;
     background-color: #fff;
+    font-size: 0.9rem;
 }
 
 .order-summary-card {
     display: grid;
-    gap: 1.5rem;
+    gap: 1.3rem;
     padding: 2rem;
     text-align: center;
+    color: var(--clr-desaturated-blue);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: var(--fw-black);
+    color: var(--clr-dark-blue);
 }
 
 .plan {
     display: flex;
-    /* justify-content: space-evenly; */
+    justify-content: space-between;
     align-items: center;
+    border: none;
+    border-radius: 0.6rem;
+    background-color: var(--clr-very-pale-blue);
+    padding: 1rem;
+}
+
+.plan a {
+    font-size: 0.8rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-bright-blue);
 }
 
 .annual-plan-flex-group {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
 }
 
-/* .annual-plan-flex-group::before {
+.annual-plan-flex-group::before {
     content: "";
     background: url(images/icon-music.svg);
     width: 48px;
     height: 48px;
-} */
+}
+
+.annual-plan-texts p:nth-child(1) {
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-blue);
+}
+
+.payment {
+    display: grid;
+    gap: 1rem;
+}
+
+.payment a {
+    color: var(--clr-desaturated-blue);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.8rem;
+    color: #fff;
+    font-weight: var(--fw-bold);
+    background-color: var(--clr-bright-blue);
+}
 
 
 /* Attribution */
