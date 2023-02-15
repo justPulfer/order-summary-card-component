@@ -88,6 +88,7 @@ body {
     font-family: 'Red Hat Display', sans-serif;
     font-weight: var(--fw-medium);
     font-size: 1rem;
+    background-color: var(--clr-pale-blue);
 }
 
 main {
@@ -98,8 +99,6 @@ main {
     height: 100vh;
     justify-content: center;
     align-items: center;
-
-    background-color: var(--clr-pale-blue);
 }
 
 .main-container {
@@ -108,6 +107,7 @@ main {
     overflow: hidden;
     background-color: #fff;
     font-size: 0.9rem;
+    max-width: 380px;
 }
 
 .order-summary-card {
@@ -119,7 +119,7 @@ main {
 }
 
 .card-title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: var(--fw-black);
     color: var(--clr-dark-blue);
 }
@@ -146,6 +146,11 @@ main {
     align-items: center;
 }
 
+.change-link:hover {
+    color: hsl(256, 92%, 70%);
+    text-decoration: none;
+}
+
 .annual-plan-flex-group::before {
     content: "";
     background: url(images/icon-music.svg);
@@ -170,12 +175,31 @@ main {
 }
 
 button {
+    cursor: pointer;
     border: none;
     border-radius: 0.6rem;
-    padding: 0.8rem;
+    padding: 0.6rem;
     color: #fff;
     font-weight: var(--fw-bold);
     background-color: var(--clr-bright-blue);
+
+    box-shadow: 0 2px 1px rgba(69, 81, 255, 0.09),
+            0 4px 2px rgba(69, 81, 255, 0.09),
+            0 8px 4px rgba(69, 81, 255, 0.09),
+            0 16px 8px rgba(69, 81, 255, 0.09),
+            0 32px 16px rgba(69, 81, 255, 0.09);
+}
+
+button:hover {
+    background-color: hsl(245, 75%, 65%);
+}
+
+.cancel-link:hover {
+    color: var(--clr-dark-blue);
+}
+
+img {
+    width: 100%;
 }
 
 
@@ -190,8 +214,11 @@ button {
     color: hsl(228, 45%, 44%);
 }
 
-/* @media (min-width: 600px) {
+@media (min-width: 600px) {
+
     main {
         background-image: url(images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 500px;
     }
-} */
+}
